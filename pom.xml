@@ -33,7 +33,7 @@
 			<plugin>
   <groupId>org.mule.tools.maven</groupId>
   <artifactId>mule-maven-plugin</artifactId>
-  <version>3.8.0</version> <!-- or latest -->
+  <version>4.1.0</version>
   <configuration>
     <cloudHubDeployment>
       <username>${anypoint.username}</username>
