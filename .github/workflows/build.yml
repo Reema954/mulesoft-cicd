@@ -27,9 +27,4 @@ jobs:
         restore-keys: ${{ runner.os }}-maven
 
     - name: Deploy to CloudHub
-      run: mvn clean deploy -DmuleDeploy \
-        -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} \
-        -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }} \
-        -Danypoint.environment=${{ secrets.ENVIRONMENT }} \
-        -Danypoint.businessGroup=${{ secrets.BUSINESS_GROUP }} \
-        -Dapp.name=${{ secrets.APP_NAME }}
+      run: mvn clean deploy -DmuleDeploy -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }} -Danypoint.environment=${{ secrets.ENVIRONMENT }} -Danypoint.businessGroup=${{ secrets.BUSINESS_GROUP }} -Dapp.name=${{ secrets.APP_NAME }}
