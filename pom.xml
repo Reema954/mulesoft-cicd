@@ -30,6 +30,23 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 			</plugin>
+			<plugin>
+  <groupId>org.mule.tools.maven</groupId>
+  <artifactId>mule-maven-plugin</artifactId>
+  <version>3.8.0</version> <!-- or latest -->
+  <configuration>
+    <cloudHubDeployment>
+      <username>${anypoint.username}</username>
+      <password>${anypoint.password}</password>
+      <applicationName>${app.name}</applicationName>
+      <environment>${anypoint.environment}</environment>
+      <businessGroup>${anypoint.businessGroup}</businessGroup>
+      <workerType>MICRO</workerType>
+      <workers>1</workers>
+    </cloudHubDeployment>
+  </configuration>
+</plugin>
+
 		</plugins>
 	</build>
 
