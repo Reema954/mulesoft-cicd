@@ -15,6 +15,10 @@
 
 		<app.runtime>4.6.3</app.runtime>
 		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
+		 <workers>1</workers>
+      <target>cloudhub</target>
+      <region>us-east-1</region>
+	<objectStoreV2>true</objectStoreV2>
 	</properties>
 
 	<build>
