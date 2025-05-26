@@ -15,7 +15,6 @@
         <workers>1</workers>
         <region>us-east-1</region>
         <objectStoreV2>true</objectStoreV2>
-        <app.name>${app.name}</app.name> <!-- App name from GitHub secret -->
     </properties>
 
     <build>
