@@ -10,21 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Java
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
 
-    - name: Cache Maven packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-maven
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven
 
-    - name: Deploy to CloudHub
-      run: mvn clean deploy -DmuleDeploy -Danypoint.username=${{ secrets.ANYPOINT_PLATFORM_USERNAME }} -Danypoint.password=${{ secrets.ANYPOINT_PLATFORM_PASSWORD }} -Danypoint.environment=${{ secrets.ENVIRONMENT }} -Danypoint.businessGroup=${{ secrets.BUSINESS_GROUP }} -Dapp.target=${{secrets.TARGET}} -Dapp.name=${{ secrets.APP_NAME }}
+      - name: Deploy to CloudHub
+        run: mvn clean deploy -DmuleDeploy \
+              -Danypoint.username=${{ secrets.ANYPOINT_PLATFORM_USERNAME }} \
+              -Danypoint.password=${{ secrets.ANYPOINT_PLATFORM_PASSWORD }} \
+              -Danypoint.environment=${{ secrets.ENVIRONMENT }} \
+              -Danypoint.businessGroup=${{ secrets.BUSINESS_GROUP }} \
+              -Dapp.name=${{ secrets.APP_NAME }}
