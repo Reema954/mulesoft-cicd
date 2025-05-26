@@ -41,8 +41,9 @@
       <applicationName>${app.name}</applicationName>
       <environment>${anypoint.environment}</environment>
       <businessGroup>${anypoint.businessGroup}</businessGroup>
-      <workerType>MICRO</workerType>
       <workers>1</workers>
+      <target>CH2</target>
+      <region>us-east-1</region>
     </cloudHubDeployment>
   </configuration>
 </plugin>
