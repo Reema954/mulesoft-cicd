@@ -33,6 +33,7 @@
                         <businessGroup>${anypoint.businessGroup}</businessGroup>
                         <workers>${workers}</workers>
                         <region>${region}</region>
+                        <overwrite>true</overwrite>
                         <objectStoreV2>${objectStoreV2}</objectStoreV2>
                     </cloudHubDeployment>
                 </configuration>
