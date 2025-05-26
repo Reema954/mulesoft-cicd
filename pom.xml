@@ -15,10 +15,10 @@
 
 		<app.runtime>4.6.3</app.runtime>
 		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
-		 <workers>1</workers>
-      <target>cloudhub</target>
-      <region>us-east-1</region>
-	<objectStoreV2>true</objectStoreV2>
+		<workers>1</workers>
+      		<target>cloudhub</target>
+      		<region>us-east-1</region>
+		<objectStoreV2>true</objectStoreV2>
 	</properties>
 
 	<build>
@@ -35,34 +35,34 @@
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
-  <groupId>org.mule.tools.maven</groupId>
-  <artifactId>mule-maven-plugin</artifactId>
-  <version>4.1.0</version>
-  <extensions>true</extensions>
-  <executions>
-    <execution>
-      <id>deploy-to-cloudhub</id>
-      <phase>deploy</phase>
-      <goals>
-        <goal>deploy</goal>
-      </goals>
-      <configuration>
-        <cloudHubDeployment>
-          <username>${anypoint.username}</username>
-          <password>${anypoint.password}</password>
-          <applicationName>${app.name}</applicationName>
-          <environment>${anypoint.environment}</environment>
-          <businessGroup>${anypoint.businessGroup}</businessGroup>
-          <workers>1</workers>
-          <region>us-east-1</region>
-          <objectStoreV2>true</objectStoreV2>
-		  <target>cloudhub</target>
-        </cloudHubDeployment>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
-		</plugins>
+  				<groupId>org.mule.tools.maven</groupId>
+  				<artifactId>mule-maven-plugin</artifactId>
+  				<version>4.1.0</version>
+  				<extensions>true</extensions>
+  				<executions>
+   				 <execution>
+      					<id>deploy-to-cloudhub</id>
+      					<phase>deploy</phase>
+      					<goals>
+        					<goal>deploy</goal>
+     				        </goals>
+      					<configuration>
+        					<cloudHubDeployment>
+          						<username>${anypoint.username}</username>
+          						<password>${anypoint.password}</password>
+          						<applicationName>${app.name}</applicationName>
+          						<environment>${anypoint.environment}</environment>
+         						<businessGroup>${anypoint.businessGroup}</businessGroup>
+          						<workers>1</workers>
+          						<region>us-east-1</region>
+          						<objectStoreV2>true</objectStoreV2>
+		  					<target>cloudhub</target>
+        					</cloudHubDeployment>
+      					</configuration>
+    				</execution>
+  			   </executions>
+			</plugin>
+	  </plugins>
 	</build>
 
 	<dependencies>
