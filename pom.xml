@@ -19,29 +19,25 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.mule.tools.maven</groupId>
-                <artifactId>mule-maven-plugin</artifactId>
-                <version>${mule.maven.plugin.version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <deployments>
-                       <deployment>
-                    	<cloudHubDeployment>
-                                        <username>mulesample210</username>
-                                        <password>Monika@54321</password>
-                                        <applicationName>simple</applicationName>
-                                        <environment>SANDBOX</environment>
-                                        <businessGroup>abc</businessGroup>
-                                        <workers>1</workers>
-                                        <region>us-east-1</region>
-                                        <objectStoreV2>true</objectStoreV2>
-                                        <overwrite>true</overwrite>
-                           </cloudHubDeployment>
-                       </deployment>
-                    </deployments>
-                </configuration>
-            </plugin>
+           <plugin>
+  <groupId>org.mule.tools.maven</groupId>
+  <artifactId>mule-maven-plugin</artifactId>
+  <version>4.1.0</version>
+  <extensions>true</extensions>
+  <configuration>
+    <cloudHubDeployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <muleVersion></muleVersion>
+      <username>mulesample210</username>
+      <password>Monika@54321</password>
+      <applicationName>simple</applicationName>
+      <environment>Sandbox</environment>
+      <region>us-east-1</region>
+      <workers>1</workers>
+      <workerType>MICRO</workerType>
+    </cloudHubDeployment>
+  </configuration>
+</plugin>
         </plugins>
     </build>
 
