@@ -25,6 +25,7 @@
                 <version>${mule.maven.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                 <deployments>
                     <cloudHubDeployment>
                         <username>${anypoint.username}</username>
                         <password>${anypoint.password}</password>
@@ -36,6 +37,7 @@
                         <objectStoreV2>${objectStoreV2}</objectStoreV2>
                         <overwrite>true</overwrite>
                     </cloudHubDeployment>
+                   </deployments>
                 </configuration>
             </plugin>
         </plugins>
