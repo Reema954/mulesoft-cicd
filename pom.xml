@@ -26,17 +26,17 @@
                 <extensions>true</extensions>
                 <configuration>
                     <deployments>
-                        <cloudHubDeployment>
-                            <username>${anypoint.username}</username>
-                            <password>${anypoint.password}</password>
-                            <applicationName>${app.name}</applicationName>
-                            <environment>${anypoint.environment}</environment>
-                            <businessGroup>${anypoint.businessGroup}</businessGroup>
-                            <workers>${workers}</workers>
-                            <region>${region}</region>
-                            <objectStoreV2>${objectStoreV2}</objectStoreV2>
-                            <overwrite>true</overwrite>
-                        </cloudHubDeployment>
+                    	<cloudHubDeployment>
+                                        <username>mulesample210</username>
+                                        <password>Monika@54321</password>
+                                        <applicationName>simple</applicationName>
+                                        <environment>SANDBOX</environment>
+                                        <businessGroup>abc</businessGroup>
+                                        <workers>1</workers>
+                                        <region>us-east-1</region>
+                                        <objectStoreV2>true</objectStoreV2>
+                                        <overwrite>true</overwrite>
+                           </cloudHubDeployment>
                     </deployments>
                 </configuration>
             </plugin>
